@@ -16,10 +16,11 @@ app.use(morgan('combined'))
 
 app.use(express.json())
 app.use(express.static(path.join(__dirname, '..', 'public')))
+
 app.use(planetsRouter)
 app.use(launchesRouter)
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
     res.send(path.join(__dirname, '..', 'public', 'index.html'))
-} )
+} ) // the * after the endpoint will let the react router handle the clientside routing if it is after all the other set routes
 
 module.exports = app
