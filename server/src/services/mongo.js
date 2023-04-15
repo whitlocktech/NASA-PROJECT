@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-
+const MONGO_URL = process.env.MONGO_URL //bad don't leave secrets in code
 
 mongoose.connection.once('open', () => {
     console.log('Connection Ready')
