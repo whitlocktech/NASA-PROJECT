@@ -3,10 +3,12 @@ const app = require('../../app')
 const { mongoConnect,
 mongoDisconnect,
  } = require('../../services/mongo')
+const { loadPlantesData } = require('../../models/planets.model')
 
 describe('Launches API', () => {
     beforeAll(async () => {
         await mongoConnect()
+        await loadPlantesData()
     })
     afterAll(async () => {
         await mongoDisconnect()
