@@ -15,7 +15,6 @@ jobs:
     runs-on: [ubuntu-latest, windows-latest]
     steps:
       - uses: actions/checkout@v3
-      - name: User Node.js Version ${{ matrix.node-version }}
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
