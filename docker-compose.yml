@@ -1,0 +1,8 @@
+version: '3'
+services:
+  nasa-project:
+    image: whitlocktech/nasa-project
+    container_name:  nasa-project
+    ports:
+      - 8000:8000
+    restart: unless-stopped
